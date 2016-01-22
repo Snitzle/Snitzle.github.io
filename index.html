@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Lincoln Uni Open Day</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -86,7 +86,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Accomodation info, we got you.</h2>
+                    <h2 class="section-heading">Why Visit Us?</h2>
                     <hr class="light">
                     <p class="text-faded">Fall all of your accomodation information needs follow this button</p>
                     <a href="#" class="btn btn-default btn-xl">View Accomodation</a>
@@ -137,20 +137,20 @@
             </div>
         </div>
     </section>
-
+  <!--  Accomodation clickable Image grid -->
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
+                    <a href="courts.html" class="portfolio-box">
                         <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    The Student Village
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Lincoln Courts
                                 </div>
                             </div>
                         </div>
@@ -162,10 +162,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Waterside Accommodation
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Brayford Quay
                                 </div>
                             </div>
                         </div>
@@ -177,10 +177,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Waterside Accommodation
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Hayes Wharf
                                 </div>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                                     Category
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    The Junxion
                                 </div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                                     Category
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Park Court
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                                     Category
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Pavilion House
                                 </div>
                             </div>
                         </div>
@@ -235,11 +235,11 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
+    <aside class="bg-primary">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+                <h2>View Accommodation Price Guide</h2>
+                <a href="price.html" class="btn btn-default btn-xl wow tada">Price Guide!</a>
             </div>
         </div>
     </aside>
@@ -264,6 +264,9 @@
         </div>
     </section>
 
+    <aside class="col-lg-12 text-center no-padding" id="googleMap" style="width: 100%;height:300px;">
+    </aside>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -277,6 +280,68 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- Google Maps API -->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+    function initialize(){
+
+      var myLatLng = new google.maps.LatLng(53.229185, -0.550754);
+      var hayesWharf = new google.maps.LatLng(53.233066, -0.549410);
+      var brayfordQuay = new google.maps.LatLng(53.230669, -0.545457);
+      var junxion = new google.maps.LatLng(53.226902, -0.544427);
+      var parkCourt = new google.maps.LatLng(53.230617, -0.543295);
+      var pavilion = new google.maps.LatLng(53.228752, -0.553411);
+
+      var mapProp = {
+        zoom: 15,
+        center: myLatLng,
+        disableDefaultUI: true,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map:map,
+        title:"University of Lincoln"
+      });
+
+      var marker = new google.maps.Marker({
+        position: hayesWharf,
+        map:map,
+        title:"Hayes Wharf"
+      });
+
+      var marker = new google.maps.Marker({
+        position: brayfordQuay,
+        map:map,
+        title:"Brayford Quay"
+      });
+
+      var marker = new google.maps.Marker({
+        position: junxion,
+        map:map,
+        title:"Junxion"
+      });
+
+      var marker = new google.maps.Marker({
+        position: parkCourt,
+        map:map,
+        title:"Park Court"
+      });
+
+      var marker = new google.maps.Marker({
+        position: pavilion,
+        map:map,
+        title:"pavilion"
+      });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 </body>
 
