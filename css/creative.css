@@ -186,6 +186,30 @@ header {
     -o-background-size: cover;
 }
 
+header.header-courts {
+    background-image: url(../img/headerCourts.jpg);
+}
+
+header.header-quay {
+    background-image: url(../img/headerQuay.jpg);
+}
+
+header.header-wharf {
+    background-image: url(../img/headerCourts.jpg);
+}
+
+header.header-junxion {
+    background-image: url(../img/headerCourts.jpg);
+}
+
+header.header-parkcourt {
+    background-image: url(../img/headerCourts.jpg);
+}
+
+header.header-house {
+    background-image: url(../img/headerCourts.jpg);
+}
+
 header .header-content {
     position: relative;
     width: 100%;

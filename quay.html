@@ -71,12 +71,12 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header class="header-courts">
+    <header class="header-quay">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Courts</h1>
+                <h1>Brayford Quay</h1>
                 <hr>
-                <p>Here you should find all the information you will need for the open day, accomodation and local services.</p>
+                <p>Riverside Accomodation just moments from the town center.</p>
             </div>
         </div>
     </header>
@@ -87,11 +87,26 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Why Visit Us?</h2>
                     <hr class="light">
-                    <p class="text-faded">Fall all of your accomodation information needs follow this button</p>      
+                    <p class="text-faded">Riverside Accomodation with a view just moments from the city</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="bg-dark" id="about">
+        <div class="container">
+            <div class="row">
+                <table>
+
+
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2suk!4v1453904200198!6m8!1m7!1swQrGdvX-Fn4DFHZYqf010g!2m2!1d53.2291876077578!2d-0.5455012096618646!3f319.4601704481012!4f38.36562273217967!5f0.7820865974627469" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+-->
 
     <aside class="col-lg-12 text-center no-padding" id="googleMap" style="width: 100%;height:300px;">
     </aside>
@@ -116,32 +131,26 @@
     <script>
     function initialize(){
 
-      var myLatLng = new google.maps.LatLng(53.229185, -0.550754);
-      var hayesWharf = new google.maps.LatLng(53.233066, -0.549410);
+      var uniLincoln = new google.maps.LatLng(53.229185, -0.550754);
+      var uniName = "Lincoln University, England";
       var brayfordQuay = new google.maps.LatLng(53.230669, -0.545457);
-      var junxion = new google.maps.LatLng(53.226902, -0.544427);
-      var parkCourt = new google.maps.LatLng(53.230617, -0.543295);
-      var pavilion = new google.maps.LatLng(53.228752, -0.553411);
+      var accName + "Brayford Quay";
 
       var mapProp = {
         zoom: 19,
-        center: myLatLng,
+        center: uniLincoln,
         disableDefaultUI: true,
         mapTypeId:google.maps.MapTypeId.ROADMAP
       };
 
       var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map:map,
-        title:"University of Lincoln"
-      });
+      //markers on map
 
       var marker = new google.maps.Marker({
-        position: hayesWharf,
+        position: uniLincoln,
         map:map,
-        title:"Hayes Wharf"
+        title:"University of Lincoln"
       });
 
       var marker = new google.maps.Marker({
@@ -150,23 +159,18 @@
         title:"Brayford Quay"
       });
 
-      var marker = new google.maps.Marker({
-        position: junxion,
-        map:map,
-        title:"Junxion"
-      });
-
-      var marker = new google.maps.Marker({
-        position: parkCourt,
-        map:map,
-        title:"Park Court"
-      });
-
-      var marker = new google.maps.Marker({
-        position: pavilion,
-        map:map,
-        title:"pavilion"
-      });
+      var service = new google.maps.DistanceMatrixService();
+      service.getDistanceMatrix(
+        {
+          origins: [uniLincoln, uniName],
+          destinations: [brayfordQuay, accName],
+          travelMode: google.maps.TravelMode.DRIVING,
+          transitOptions: TransitOptions,
+          drivingOptions: DrivingOptions,
+          unitSystem: UnitSystem,
+          avoidHighways: Boolean,
+          avoidTolls: Boolean,
+        }, callback);
 
     }
     google.maps.event.addDomListener(window, 'load', initialize);
