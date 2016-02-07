@@ -195,19 +195,19 @@ header.header-quay {
 }
 
 header.header-wharf {
-    background-image: url(../img/headerCourts.jpg);
+    background-image: url(../img/headerWharf.jpg);
 }
 
 header.header-junxion {
-    background-image: url(../img/headerCourts.jpg);
+    background-image: url(../img/headerJunxion.jpg);
 }
 
 header.header-parkcourt {
-    background-image: url(../img/headerCourts.jpg);
+    background-image: url(../img/headerPark.jpg);
 }
 
 header.header-house {
-    background-image: url(../img/headerCourts.jpg);
+    background-image: url(../img/headerPav.jpg);
 }
 
 header .header-content {
