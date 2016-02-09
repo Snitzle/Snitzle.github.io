@@ -56,6 +56,10 @@ b,
 strong {
   font-weight: bold;
 }
+
+.testDiv{
+  min-height: 25px;
+}
 dfn {
   font-style: italic;
 }
