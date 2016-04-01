@@ -349,7 +349,7 @@ tbody tr:nth-child(even)  td { background-color: #eee; }
 }
 
 .text-primary {
-    color: #f05f40;
+    color: #02254F;
 }
 
 .no-gutter > [class*=col-] {
