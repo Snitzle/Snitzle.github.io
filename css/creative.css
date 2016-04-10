@@ -11,7 +11,7 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
 }
 
 hr {
@@ -89,7 +89,7 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: #02254F;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -222,6 +222,7 @@ header .header-content .header-content-inner h1 {
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: Palatino Linotype;
 }
 
 header .header-content .header-content-inner hr {
