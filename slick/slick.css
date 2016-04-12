@@ -5,6 +5,8 @@
 
     display: block;
 
+    height: auto;
+
     -moz-box-sizing: border-box;
          box-sizing: border-box;
 
@@ -79,7 +81,7 @@
     display: none;
     float: left;
 
-    height: 60vh;
+    max-height: 60vh;
     min-height: 1px;
 }
 [dir='rtl'] .slick-slide
